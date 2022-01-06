@@ -1,5 +1,6 @@
 import { SocialUser } from "angularx-social-login";
 
-export class User{;
+export class FrontendData{;
   static user: SocialUser;
+  static postResponse: any;
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialUser } from 'angularx-social-login';
-import { User } from '../loggedUser';
+import { FrontendData } from '../frontendData';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +10,13 @@ import { User } from '../loggedUser';
 export class HomeComponent implements OnInit {
 
   user!: SocialUser;
+  response:any;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.user = User.user;
+    this.user = FrontendData.user;
+    this.response = FrontendData.postResponse;
   }
 
 }

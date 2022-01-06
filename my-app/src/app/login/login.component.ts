@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { GoogleLoginProvider, SocialAuthService, SocialUser } from 'angularx-social-login';
-import { User } from '../loggedUser';
+import { FrontendData } from '../frontendData';
 import { TokenVerificationService } from '../token-verification.service';
 
 @Component({
@@ -19,10 +19,11 @@ export class LoginComponent {
       console.log(user);
       this.verificationService.postData(user).subscribe(res => {
           console.log(res);
+          FrontendData.postResponse = res;
+          FrontendData.user = user;
+          this.router.navigateByUrl('/home');
         }
       );
-      User.user = user;
-      this.router.navigateByUrl('/home');
     });
   }
 
