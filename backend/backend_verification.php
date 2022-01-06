@@ -15,10 +15,10 @@
         $client = new Google_Client(['client_id' => $CLIENT_ID]);  // Specify the CLIENT_ID of the app that accesses the backend
         $payload = $client->verifyIdToken($id_token);
         if ($payload) {
-            $res = array('success' => false);
+            $res = array('success' => true);
             echo json_encode($res);
         } else {
-            $res = array('success' => true);
+            $res = array('success' => false);
             echo json_encode($res);
         }
     }

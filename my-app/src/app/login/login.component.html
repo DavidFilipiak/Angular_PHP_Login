@@ -1,2 +1,6 @@
-<p>Sign in</p>
-<button (click)="signIn()">Google sign in</button>
+<div>
+    <p>Sign in</p>
+    <button (click)="signIn()">Google sign in</button>
+    <p class="errMessage" *ngIf="response.success == false">Sign in unsuccessful. Try again.</p>
+</div>
+

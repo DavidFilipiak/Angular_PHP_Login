@@ -1,0 +1,13 @@
+h1,p{
+    align-self: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: xx-large;
+}
+
+p{
+    font-size: large;
+}

@@ -11,6 +11,8 @@ import { TokenVerificationService } from '../token-verification.service';
 })
 export class LoginComponent {
 
+  response:any;
+
   constructor(private authService: SocialAuthService, private router: Router, private verificationService: TokenVerificationService) { }
 
   signIn() {
@@ -19,9 +21,12 @@ export class LoginComponent {
       console.log(user);
       this.verificationService.postData(user).subscribe(res => {
           console.log(res);
+          this.response = res;
           FrontendData.postResponse = res;
           FrontendData.user = user;
-          this.router.navigateByUrl('/home');
+          if(this.response.success == true){
+            this.router.navigateByUrl('/home');
+          }
         }
       );
     });

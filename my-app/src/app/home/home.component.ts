@@ -10,13 +10,11 @@ import { FrontendData } from '../frontendData';
 export class HomeComponent implements OnInit {
 
   user!: SocialUser;
-  response:any;
 
   constructor() { }
 
   ngOnInit(): void {
     this.user = FrontendData.user;
-    this.response = FrontendData.postResponse;
   }
 
 }
