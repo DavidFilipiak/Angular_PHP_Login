@@ -8,3 +8,7 @@ Pre spustenie frontendu, choďte do priečinka 'my-app' a do Terminálu zadajte 
 EN:
 In order to start up the backend, navigate to the 'backend' folder and enter 'php -S localhost:8000' into your Terminal. The server must be running on port 8000 to communicate with the frontend.
 In order to start up the frontend, navigate to the 'my-app' folder and enter 'ng serve -o'. This command opens a new browser window with the web page.
+
+
+-------
+Aplikácia je dosť, a pravdepodobne píliš, veľká, keďže som stiahol celú Google Client API knižnicu pre PHP, ktorá má okolo 17MB.
